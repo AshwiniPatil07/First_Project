@@ -1,0 +1,363 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.header {
+    padding: 20px;
+    text-align: center;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+}
+
+body{
+	background-image: linear-gradient(to bottom, Cyan, PowderBlue );
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+	color : purple;
+	text-shadow: 2px 2px indigo;
+}
+	
+*{box-sizing:border-box}
+	.mySlides {display: none}
+	img {vertical-align: middle;}
+
+.slideshow-container {
+  max-width: 500px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: 10%;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 0px 0px;
+}
+
+.next {
+  right:0px;
+  border-radius:10px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.2);
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 10px;
+  width: 10px;
+  margin: 0 2px;
+  background-color:black;;
+  border-radius: 40%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color:white;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+.main {
+    margin-left: 100px;
+	margin-right: 100px;
+}
+
+* {box-sizing: border-box;}
+.container {
+  width: 50%;
+  max-width: 300px;
+}
+
+/* Three equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 15px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width:600px) {
+    .column {
+        width: 100%;
+    }
+}
+
+div.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: horizontal;
+    width: 180px;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+.zoom {
+  padding: 50px;
+  transition: transform .2s;
+  margin: 0 auto;
+}
+
+.zoom:hover {
+  -ms-transform: scale(1.5); 
+  -webkit-transform: scale(1.5); 
+  transform: scale(1.5); 
+}
+
+form {
+    border: none;
+    font-family: Arial;
+}
+
+input[type=text], input[type=submit] {
+    width: 50%;
+    padding: 12px;
+    margin: 2px 0;
+}
+
+input[type=checkbox] {
+    margin-top: 16px;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+}
+
+input[type=submit]:hover {
+    opacity: 0.8;
+}
+
+</style>
+</head>
+
+<body>
+	<div class ="header">
+		<h1 align="center" style="font-size:700%">Ladakh Tourism</h1>
+				<div class="navbar">
+					<a href="Ladakh.html">Home</a>
+					<a href="more.html">Explore</a>
+					<a href="login.html">Login</a>
+				</div>
+	</div>
+
+			<div class="slideshow-container">
+
+				<div class="mySlides fade">
+  					<img src="images\bg1.jpg" style="width:100%">
+				</div>
+
+				<div class="mySlides fade">
+ 				 	<img src="images\bg2.jpg" style="width:100%">
+				</div>
+
+				<div class="mySlides fade">
+  					<img src="images\bg3.jpg" style="width:100%">
+				</div>
+
+				<div class="mySlides fade">
+ 				 	<img src="images\bg4.jpg" style="width:100%">
+				</div>
+
+				<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+				<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+			</div>
+			<br>
+
+		<div style="text-align:center">
+  			<span class="dot" onclick="currentSlide(1)"></span> 
+  			<span class="dot" onclick="currentSlide(2)"></span> 
+  			<span class="dot" onclick="currentSlide(3)"></span> 
+   			<span class="dot" onclick="currentSlide(4)"></span>
+		</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+<div class="main">
+	<p style="font-size:100%"><b>Ladakh is a Beautiful and Mesmerizing art of Nature. It is the mountainous region and the coldest desert in 
+the world. In Ladakh the nature has rendered a magical, unbelievable and fantastic landscape which is extremely breathtaking.Ladakh lies
+in the north-east region of India and is surrounded by the world’s highest mountain ranges, Karakoram and Great Himalayas.The Ladakh 
+district occupied Kashmir in the west and China in the north. Ladakh is an exotic destination considered as the highest plateau lying at
+an altitude of 9,800 ft. Ladakh is the 3rd province of Kashmir Valley. The population of Ladakh is about 2,60,000 which contain a mixture
+of many different ethnic groups, predominantly Tibetans, Monpas, Dards and Muslims. In 1979, the Ladakh District was divided into Leh 
+District (mostly occupied by Tibetan Buddhist) and Kargil District (mostly occupied by Shia Muslims).The Ladakh is known for its extreme 
+deserts, blue waters, freezing winds, glaciers and sand dunes. Ladakh is a region of India which is totally isolated from the modern world.
+The main source of water is the winter snowfall on the mountains.</b></p>
+</div>	
+
+
+<h2 style="color:red">Places to visit in Ladakh</h2>
+
+
+	<div class="row">
+  		<div class="column">
+		<img class="zoom" src=" images\PL.jpg" alt="PL" align= "center" width="100%" height="100%"><p>Pangong lake is one of most popular place. The life in Ladakh is mainly characterized by spirituality because from the beginning it is being faithful to its ancestral customs and traditions or in other words we can say that the way of life in Ladakh is simple, as modernity has not touched Leh town. Ladakh is also known as a mysterious Land which has never ceased its beauty and nature like its highest peaks, snow capped mountains, flowing rivers. The architecture in Ladakh exhibits strong and deep influences from Tibet and India which shows great regional diversity. The architecture of Ladakh can be seen in the various monasteries and Gompas which are enchanting.</p>
+		</div>
+
+
+	<div class="clearfix">
+		<div class="row">
+			<div class="column">
+			<img class="zoom" src=" images\mh.jpg" alt="mh" width="100%" height="10%"><p>A Hill with Magnetic properties.Magnetic hill also known as gravity hill is a place located on the Leh-Kargil-Srinagar national highway, about 30 km from Leh.The magnetic Hill is located at a height of 14,000 feet above sea level.The layout of the surrounding land produces the optical illusion that a very slight downhill slope appears to be an uphill slope. Thus, a car left out of gear will appear to be rolling uphill.Magnetic hill near picturesque Leh has magnetic properties which attracts metallic objects,making vehicles move up at a speed of about 20 km per hour with their engines off. The local administration has put up a billboard near the "Magnetic Hill" for tourists stating that if a vehicle is placed on a particular spot on the road and the engine is switched off,it would not slide down but move up.</p>
+		</div>
+
+	<div class="clearfix">
+		<div class="row">
+			<div class="column">
+			<img class="zoom" src=" images\nv.jpg" alt="nv" width="100%" height="20%"><p>Nubra valley is famously known as “BROKEN MOONLAND” because in winter, the whole valley looks like the landscape of moon.A valley of orchards in a cold, barren land.Nubra Valley was originally called LDUMRA which means the valley of flowers.Now, it is also known as Orchard of Ladakh.Nubra Valley is a Tri-armed valley, which is located to the north east of Ladakh valley.Nubra valley is formed by the Shyok River, which is a tributary of the Indus, and the Nubra or the Siachen River.Nubra Valley is about 150km north from its principle town, Leh.Nubra Valley was the ancient gateway for the famous Silk Route.The average altitude of Nubra Valley is about 10,000ft above from the sea level.</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div><h2 style="color:red">Top Destinations</h2>
+	<marquee loop="2">
+		<div class="row">
+		  <div class="column">
+			<img src="images\SS.jpg"  style="width:100%">
+		  </div>
+		  <div class="column">
+			<img src="images\KL.jpg" style="width:100%" height="100%">
+		  </div>
+		  <div class="column">
+			<img src="images\SM.jpg" style="width:100%">
+		  </div>
+		</div>
+	</marquee>
+</div>
+
+<div class="footer" style="margin: 15px">
+			<div class="row">
+				<div class="column";style="width:100%">
+					<ul style="height:195px;list-style:none;text-align:left;">
+							<h2 style="color:red"><b>ABOUT</b></h2>
+							<li><a href="about.html"><b>About us</b></a></li>
+							<li><a href="privacy.html"><b>Priavcy Policy</b></a></li>
+							<li><a href="Ladakh.html"><b>Home</b></a></li>
+					</ul>
+				</div>
+				<div class="column">
+					<form action=""  autocomplete="off" class="form-horizontal" method="post">
+					<h2 style="color:red">Subscribe our Newsletter:</h2><small><h3 style="color:Purple">Get notified to Ladakh Tourism events and activities</h3></small>
+					<div class="input-group">
+						<input name="email" value="" class="form-control email-field" type="text" placeholder="Your Email">
+						<span class="input-group-btn">
+							<button class="btn btn-default subscribe-btn" type="submit">
+								SUBSCRIBE
+							</button>
+						</span>
+					</div>
+					</form>
+				</div>
+				<div class="column">
+					<p style="font-size: 150%; color:red; align:left">
+						<strong>Connect with us:</strong>
+						<div class="social">
+							<i style="font-size: 44px" class="fa"> <a href="https://www.facebook.com" />&#xf082;</i>
+							<i style="font-size: 44px" class="fa"> <a href="https://www.instagram.com" />&#xf08c;</i>
+							<i style="font-size: 44px" class="fa"> <a href="https://www.pinterest.com" />&#xf0d3;</i>
+							<i style="font-size: 44px" class="fa"> <a href="https://www.twitter.com" />&#xf081;</i>
+							<i style="font-size: 44px" class="fa"> <a href="https://www.youtube.com" />&#xf166;</i></p>
+						</div>
+				</div>
+			</div>
+</div>
+
+</body>
+</html>

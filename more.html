@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.header {
+    padding: 20px;
+    text-align: center;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+}
+
+body{
+	background-image: linear-gradient(to bottom,  LightBlue ,SpringGreen);
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+	color : red;
+	text-shadow: 2px 2px indigo;}
+	
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+}
+
+/* Two equal columns that sits next to each other */
+.column {
+  flex: 50%;
+  padding: 10px;
+}
+
+h1{
+	color : purple;
+	text-shadow: 2px 2px indigo;
+}
+
+* {box-sizing: border-box;}
+.container {
+  width: 50%;
+  max-width: 300px;
+}
+
+/* Three equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 15px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width:600px) {
+    .column {
+        width: 100%;
+    }
+}
+</style>
+</head>
+
+<body>
+	<div class ="header">
+		<h1 align="center" style="font-size:700%">Ladakh Tourism</h1>
+				<div class="navbar">
+					<a href="Ladakh.html">Home</a>
+					<a href="more.html">Explore</a>
+					<a href="login.html">Login</a>
+				</div>
+	</div>
+
+	<div>
+		<h2 style="color:red"> Things to do in Ladakh</h2>
+		<iframe height="500px" width="100%" src= " iframe.html"></iframe>
+	</div>
+
+
+	<div class="row">
+		<div class="column" style="color:red"><h2>Ladakh Map</h2>
+			<div id="map" style=""width="420" height="100;"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3301.2321142443097!2d77.58438451450087!3d34.16598271917649!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38fdeb150c993295%3A0xc41a8d83a5a327e6!2sLeh+Palace!5e0!3m2!1sen!2sin!4v1536130550749" width="500" height="400" frameborder="0" style="border:0" allowfullscreen></iframe></div>
+		</div>
+		<div class="column" style="color:red"><h2>Video</h2>
+			<iframe width="500" height="395" src="https://www.youtube.com/embed/nNcNay4Bgic" autoplay></iframe>
+		</div>
+	</div>
+
+	<div class="footer" style="margin: 15px">
+				<div class="row">
+					<div class="column";style="width:100%">
+						<ul style="height:195px;list-style:none;text-align:left;">
+							<h2 style="color:red"><b>ABOUT</b></h2>
+							<li><a href="about.html"><b>About us</b></a></li>
+							<li><a href="privacy.html"><b>Priavcy Policy</b></a></li>
+							<li><a href="Ladakh.html"><b>Home</b></a></li>
+						</ul>
+					</div>
+					<div class="column">
+						<form action=""  autocomplete="off" class="form-horizontal" method="post">
+						<h2 style="color:red">Subscribe our Newsletter:</h2><small><h3 style="color:Purple">Get notified to Ladakh Tourism events and activities</h3></small>
+						<div class="input-group">
+							<input name="email" value="" class="form-control email-field" type="text" placeholder="Your Email">
+							<span class="input-group-btn">
+								<button class="btn btn-default subscribe-btn" type="submit">
+									SUBSCRIBE
+								</button>
+							</span>
+						</div>
+						</form>
+					</div>
+					<div class="column">
+						<p style="font-size: 150%; color:red; align:left">
+							<strong>Connect with us:</strong>
+							<div class="social">
+								<i style="font-size: 44px" class="fa"> <a href="https://www.facebook.com" />&#xf082;</i>
+								<i style="font-size: 44px" class="fa"> <a href="https://www.instagram.com" />&#xf08c;</i>
+								<i style="font-size: 44px" class="fa"> <a href="https://www.pinterest.com" />&#xf0d3;</i>
+								<i style="font-size: 44px" class="fa"> <a href="https://www.twitter.com" />&#xf081;</i>
+								<i style="font-size: 44px" class="fa"> <a href="https://www.youtube.com" />&#xf166;</i></p>
+							</div>
+					</div>
+				</div>
+	</div>
+</body>
+</html>
